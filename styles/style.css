@@ -1,0 +1,16 @@
+body {
+	background:url('../wikipedia-logo.png')no-repeat;
+}
+#wiki-div {
+	display:block;
+	margin:25vh auto;
+	background-color:#ECECEC;
+	border-radius:2%;
+	opacity:.8;
+	width:50vw;
+	height:50vh;
+}
+.wiki-title {
+	font-size:5em;
+	font-family:'Lobster', cursive, sans-serif;
+}
