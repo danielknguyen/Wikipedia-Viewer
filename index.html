@@ -11,16 +11,24 @@
 </head>
 <body>
 	<div id="wiki-container" class="container">
+		<!--webpage title -->
 		<p class="wiki-title text-center">Wikipedia Viewer</p>
+		<!--random article button -->
 		<div id="wiki-div">
-			<button id="random-article" class="btn btn-primary btn-md">Random Article</button>
-			<div class="search text-center">
-				<i class="fa fa-search" aria-hidden="true"></i>
-			</div>	
+			<button id="random-article" class="btn btn-primary btn-md">Random Article</button>	
+		</div>
+		<!-- search bar for article -->
+		<div class="search-div">
+			<div class="search-bar">
+				<input type="text" name="search" placeholder="Search an article"
+				>
+				<button id="btn-x"class="btn btn-danger">X</button>
+			</div>
+			<i class="fa fa-search" aria-hidden="true"></i>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>		
 </body>
 </html>

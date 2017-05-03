@@ -5,7 +5,7 @@ body {
 	margin:25vh auto;
 	background-color:#ECECEC;
 	border-radius:2%;
-	opacity:.8;
+	opacity:.9;
 	width:50vw;
 	height:50vh;
 }
@@ -17,7 +17,14 @@ body {
 #wiki-div {
 	margin:2vh 19vw;
 }
-.search {
-	font-size:3em;
-	margin:10%;
+.search-div {
+	font-size:2em;
+	margin:auto;
+}
+.search-bar {
+	display:none;
+	margin:1% 9.5vw;
+}
+.fa-search {
+	margin:0 22.5vw;
 }
