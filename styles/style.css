@@ -1,8 +1,7 @@
 body {
 	background:url('../wikipedia-logo.png')no-repeat;
 }
-#wiki-div {
-	display:block;
+#wiki-container {
 	margin:25vh auto;
 	background-color:#ECECEC;
 	border-radius:2%;
@@ -11,6 +10,14 @@ body {
 	height:50vh;
 }
 .wiki-title {
+	position:relative;
 	font-size:5em;
 	font-family:'Lobster', cursive, sans-serif;
+}
+#wiki-div {
+	margin:2vh 19vw;
+}
+.search {
+	font-size:3em;
+	margin:10%;
 }
