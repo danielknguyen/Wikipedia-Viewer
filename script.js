@@ -14,5 +14,13 @@ $(document).ready(function(){
     	$('.fa-search').show('fast');
     })
 
+    $('#search-form').keypress(function(e){
+    	var value = $('#search-form').val();
+    	if (e.which === 13) {
+
+    		return false;
+    	}
+    })
+
 
 });
