@@ -13,11 +13,20 @@ $(document).ready(function(){
     	$('.search-bar').hide('slow');
     	$('.fa-search').show('fast');
     })
-
+    //create an ajax call to get wiki data on search value upon key press
     $('#search-form').keypress(function(e){
-    	var value = $('#search-form').val();
+    	var searchVal = $('#search-form').val();
+    	var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + searchVal + '&origin=*&format=json'
     	if (e.which === 13) {
-
+    		$.ajax({
+    			url: wikiUrl,
+    			dataType: 'json',
+    			type: 'GET',
+    			headers: {'Api-User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'},
+    			success: function(data){
+    				console.log(data);
+    			}
+    		})
     		return false;
     	}
     })
