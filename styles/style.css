@@ -32,11 +32,12 @@ body {
 	background-color:#ECECEC;
 	width:80vw;
 	height:auto;
-	padding:2%;
+	padding:2% 5%;
 	opacity:.9;
 	margin:1% auto;
 	display:none;
 }
 .btnBack {
+	background-color:none;
 	margin:1% 40vw;
 }

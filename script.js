@@ -34,15 +34,25 @@ $(document).ready(function(){
 
     				for (var counter = 0; counter <= 9; counter++) {
     					$('#results-' + counter)
-    						.append('<h3>' + '<a target="_blank" href="' + data[3][counter] + '">' + data[1][counter] + '</a>' + '</h3>')
-    						.append('<h5>' + data[2][counter] + '</h5>');
+    						.append('<p class="search-title">' + '<a target="_blank" href="' + data[3][counter] + '">' + data[1][counter] + '</a>' + '</p>')
+    						.append('<p class="search-description">' + data[2][counter] + '</p>');
     				}
+
+    				$('.search-title')
+    					.css('font-size', '2.5em')
+    					.css('font-family', 'Francois One', 'sans-serif');
+
+    				$('.search-description')
+    					.css('font-size', '1.5em')
+    					.css('font-family', 'Neuton', 'serif');
 					
 					$('#backButton').append('<button class="btn btn-md btn-danger btnBack">Go Back</button>');
+
 					$('.btnBack').on('click', function(){
 						$('.results-div').fadeOut('slow');
 						$('#wiki-container').show('slow');
 						$('#backButton').hide('fast');
+						location.reload();
 					});
     		
     			}
