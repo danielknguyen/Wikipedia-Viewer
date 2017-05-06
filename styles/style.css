@@ -28,3 +28,11 @@ body {
 .fa-search {
 	margin:0 22.5vw;
 }
+.results-div {
+	background-color:#ECECEC;
+	width:80vw;
+	height:20vh;
+	opacity:.9;
+	margin:1% auto;
+	display:none;
+}

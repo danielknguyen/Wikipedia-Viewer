@@ -25,6 +25,18 @@ $(document).ready(function(){
     			headers: {'Api-User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'},
     			success: function(data){
     				console.log(data);
+   
+    				$('#wiki-container').hide('slow');
+    				var counter = 0;
+  					while(counter <= 9) {
+  						$('#results-' + counter).append(data[1]);
+  						counter++;
+  					}
+    				$('.results-div')
+    					.append('<p>')
+    					.show('slow');
+
+    	
     			}
     		})
     		return false;
