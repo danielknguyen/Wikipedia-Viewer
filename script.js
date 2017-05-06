@@ -5,12 +5,12 @@ $(document).ready(function(){
 	})
 	// reveals search bar and hides search icon
 	$('.fa-search').on('click', function(){
-		$('.search-bar').show('slow');
+		$('.search-bar').show('fast');
 		$('.fa-search').hide('fast');
     })
 	// hides search bar and shows search icon
     $('#btn-x').on('click', function(){
-    	$('.search-bar').hide('slow');
+    	$('.search-bar').hide('fast');
     	$('.fa-search').show('fast');
     })
     //create an ajax call to get wiki data on search value upon key press
