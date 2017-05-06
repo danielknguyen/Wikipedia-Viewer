@@ -31,8 +31,12 @@ body {
 .results-div {
 	background-color:#ECECEC;
 	width:80vw;
-	height:20vh;
+	height:auto;
+	padding:2%;
 	opacity:.9;
 	margin:1% auto;
 	display:none;
+}
+.btnBack {
+	margin:1% 40vw;
 }

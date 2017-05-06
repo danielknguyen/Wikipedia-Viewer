@@ -27,16 +27,24 @@ $(document).ready(function(){
     				console.log(data);
    
     				$('#wiki-container').hide('slow');
-    				var counter = 0;
-  					while(counter <= 9) {
-  						$('#results-' + counter).append(data[1]);
-  						counter++;
-  					}
-    				$('.results-div')
-    					.append('<p>')
-    					.show('slow');
 
-    	
+    				$('.results-div').fadeIn('slow');
+
+    			
+
+    				for (var counter = 0; counter <= 9; counter++) {
+    					$('#results-' + counter)
+    						.append('<h3>' + '<a target="_blank" href="' + data[3][counter] + '">' + data[1][counter] + '</a>' + '</h3>')
+    						.append('<h5>' + data[2][counter] + '</h5>');
+    				}
+					
+					$('#backButton').append('<button class="btn btn-md btn-danger btnBack">Go Back</button>');
+					$('.btnBack').on('click', function(){
+						$('.results-div').fadeOut('slow');
+						$('#wiki-container').show('slow');
+						$('#backButton').hide('fast');
+					});
+    		
     			}
     		})
     		return false;
