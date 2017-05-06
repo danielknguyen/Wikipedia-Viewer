@@ -6,16 +6,20 @@ body {
 	background-color:#ECECEC;
 	border-radius:2%;
 	opacity:.9;
-	width:50vw;
-	height:50vh;
+	width:auto;
+	height:auto;
+	padding:5%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
 }
 .wiki-title {
-	position:relative;
+	margin:0 auto;
 	font-size:5em;
 	font-family:'Lobster', cursive, sans-serif;
 }
 #wiki-div {
-	margin:2vh 19vw;
+	margin:2vh auto;
 }
 .search-div {
 	font-size:2em;
@@ -23,10 +27,13 @@ body {
 }
 .search-bar {
 	display:none;
-	margin:1% 9.5vw;
+	margin:1% auto;
+}
+#btn-x {
+	margin:0 auto;
 }
 .fa-search {
-	margin:0 22.5vw;
+	margin:0 auto;
 }
 .results-div {
 	background-color:#ECECEC;
@@ -39,5 +46,5 @@ body {
 }
 .btnBack {
 	background-color:none;
-	margin:1% 40vw;
+	margin:1% 0;
 }
