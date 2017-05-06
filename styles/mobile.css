@@ -1,19 +1,18 @@
-body {
-	background:none;
-}
 .wiki-title {
 	font-size:8em;
 	margin:0 auto;
 }
 #random-article {
 	font-size:3em;
+	margin: 1% 50%;
 }
 .search-div {
 	font-size:4em;
-	margin:auto;
+	margin:1% 50%;
 }
 #btn-x {
 	font-size:1em;
+	margin:1% 50%;
 }
 .search-title {
 	font-size:5em;
