@@ -30,22 +30,31 @@ $(document).ready(function(){
 
     				$('.results-div').fadeIn('slow');
 
-    			
-
     				for (var counter = 0; counter <= 9; counter++) {
     					$('#results-' + counter)
     						.append('<p class="search-title">' + '<a target="_blank" href="' + data[3][counter] + '">' + data[1][counter] + '</a>' + '</p>')
     						.append('<p class="search-description">' + data[2][counter] + '</p>');
     				}
+    				//makes script responsive
+    				var mq = window.matchMedia('(max-device-width:480px)');
 
     				$('.search-title')
-    					.css('font-size', '2.5em')
     					.css('font-family', 'Francois One', 'sans-serif');
-
     				$('.search-description')
-    					.css('font-size', '1.5em')
     					.css('font-family', 'Neuton', 'serif');
-					
+
+    				if (mq.matches) {
+    					$('.search-title')
+    						.css('font-size', '5em');
+    					$('.search-description')
+    						.css('font-size', '3em');			
+    				} else {
+    					$('.search-title')
+    						.css('font-size', '2.5em');
+    					$('.search-description')
+    						.css('font-size', '1.5em');
+    				}			
+
 					$('#backButton').append('<button class="btn btn-md btn-danger btnBack">Go Back</button>');
 
 					$('.btnBack').on('click', function(){
@@ -54,7 +63,6 @@ $(document).ready(function(){
 						$('#backButton').hide('fast');
 						location.reload();
 					});
-    		
     			}
     		})
     		return false;
