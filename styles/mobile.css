@@ -1,3 +1,6 @@
+body {
+	background:none;
+}
 .wiki-title {
 	font-size:10em;
 }
@@ -16,4 +19,7 @@
 #search-form {
 	width:auto;
 	font-size:1em;
+}
+.results-div {
+	width:auto;
 }
