@@ -9,9 +9,6 @@ body {
 	width:auto;
 	height:auto;
 	padding:5%;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
 }
 .wiki-title {
 	margin:0 auto;
