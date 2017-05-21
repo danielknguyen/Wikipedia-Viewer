@@ -8,8 +8,12 @@
 	font-size:5em;
 }
 #btn-x {
-	font-size:1em;
+	font-size:.8em;
 }
 .btnBack {
 	font-size:4em;
+}
+#search-form {
+	width:auto;
+	font-size:1em;
 }

@@ -28,6 +28,10 @@ body {
 }
 #btn-x {
 	margin:0 auto;
+	font-size:.8em;
+}
+#btn-go {
+	font-size:.8em;
 }
 .fa-search {
 	margin:0 auto;
