@@ -20,33 +20,43 @@ $(document).ready(function(){
     	if (e.which === 13) {
     		$.ajax({
                 url: wikiUrl,
-                data: {
+                data: 
+                {
                     "action": "query",
                     "format": "json",
                     "origin": "*",
-                    "prop": "revisions",
+                    "prop": "info|extracts",
                     "list": "search",
-                    "continue": "-||revisions",
+                    "titles": searchVal,
+                    "generator": "search",
+                    "inprop": "url",
+                    "exsentences": "3",
+                    "exlimit": "10",
+                    "exintro": 1,
                     "srsearch": searchVal,
-                    "srnamespace": "0",
                     "srlimit": "10",
-                    "sroffset": "10"
+                    "gsrsearch": searchVal,
+                    "gsrprop": "size|wordcount|timestamp|snippet"
                 },
-    			headers: {'Api-User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'},
-    			success: function(data){
-    				console.log(data);
+    			headers: 
+                {
+                    'Api-User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'
+                },
+    			success: function(response){
+    				console.log(response);
+
+                    
+                   
+                    
+                        
+                    
 
                     $('#wiki-container').hide('slow');
 
                     $('.results-div').fadeIn('slow');
 
-                        for (var counter = 0; counter <= 9; counter++) {
-                            $('#results-' + counter)
-                              .append('<p class="search-title">' + data.query.search[counter].title + '</p>')
-                              .append('<p class="search-description">' + data.query.search[counter].snippet + '</p>');
+                    
 
-
-    				    }
     				// makes script responsive
     				var mq = window.matchMedia('(max-device-width:480px)');
 
