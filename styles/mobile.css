@@ -4,6 +4,9 @@ body {
 .wiki-title {
 	font-size:10em;
 }
+#wiki-container {
+	margin:12.5vh, auto;
+}
 #random-article {
 	font-size:4em;
 }
