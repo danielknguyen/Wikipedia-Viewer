@@ -16,29 +16,38 @@ $(document).ready(function(){
     //create an ajax call to get wiki data on search value upon key press
     $('#search-form').keypress(function(e){
     	var searchVal = $('#search-form').val();
-    	var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + searchVal + '&origin=*&format=json'
+    	var wikiUrl = 'https://en.wikipedia.org/w/api.php?';
     	if (e.which === 13) {
     		$.ajax({
-    			url: wikiUrl,
-    			dataType: 'json',
-    			type: 'GET',
+                url: wikiUrl,
+                data: {
+                    "action": "query",
+                    "format": "json",
+                    "origin": "*",
+                    "prop": "revisions",
+                    "list": "search",
+                    "continue": "-||revisions",
+                    "srsearch": searchVal,
+                    "srnamespace": "0",
+                    "srlimit": "10",
+                    "sroffset": "10"
+                },
     			headers: {'Api-User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'},
     			success: function(data){
     				console.log(data);
-   
-    				$('#wiki-container').hide('slow');
 
-    				$('.results-div').fadeIn('slow');
+                    $('#wiki-container').hide('slow');
 
-    				for (var counter = 0; counter <= 9; counter++) {
-    					if(data !== undefined) {
+                    $('.results-div').fadeIn('slow');
+
+                        for (var counter = 0; counter <= 9; counter++) {
                             $('#results-' + counter)
-                              .append('<p class="search-title">' + '<a target="_blank" href="' + data[3][counter] + '">' + data[1][counter] + '</a>' + '</p>')
-                              .append('<p class="search-description">' + data[2][counter] + '</p>');
-                        }   
-    
-    				}
-    				//makes script responsive
+                              .append('<p class="search-title">' + data.query.search[counter].title + '</p>')
+                              .append('<p class="search-description">' + data.query.search[counter].snippet + '</p>');
+
+
+    				    }
+    				// makes script responsive
     				var mq = window.matchMedia('(max-device-width:480px)');
 
     				$('.search-title')
