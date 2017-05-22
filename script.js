@@ -44,38 +44,17 @@ $(document).ready(function(){
                 },
     			success: function(response){
     				console.log(response);
-
                     
-                   
+                    //loop through API object
+                    for (var properties in response.query.pages) {
+                        $('#results-container')
+                            .prepend('<div class="results-div"><a target="_blank" href="' + response.query.pages[properties].fullurl + '"><p id="respTitle">' + response.query.pages[properties].title + '</p></a>' + '<d class="search-description">' + response.query.pages[properties].extract + '</div></div>')
+                    }
                     
-                        
-                    
-
                     $('#wiki-container').hide('slow');
 
                     $('.results-div').fadeIn('slow');
-
-                    
-
-    				// makes script responsive
-    				var mq = window.matchMedia('(max-device-width:480px)');
-
-    				$('.search-title')
-    					.css('font-family', 'Francois One', 'sans-serif');
-    				$('.search-description')
-    					.css('font-family', 'Neuton', 'serif');
-
-    				if (mq.matches) {
-    					$('.search-title')
-    						.css('font-size', '5em');
-    					$('.search-description')
-    						.css('font-size', '3em');			
-    				} else {
-    					$('.search-title')
-    						.css('font-size', '2.5em');
-    					$('.search-description')
-    						.css('font-size', '1.5em');
-    				}			
+            			
 
 					$('#backButton').append('<button class="btn btn-md btn-danger btnBack">Go Back</button>');
 

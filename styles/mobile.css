@@ -23,3 +23,9 @@ body {
 .results-div {
 	width:auto;
 }
+#respTitle {
+	font-size:5em;
+}
+.search-description {
+	font-size:3em;
+}
