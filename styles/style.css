@@ -1,5 +1,5 @@
 body {
-	background:url('../wikipedia-logo.png')no-repeat;
+	background:url('../wikipedia-logo.png')no-repeat center fixed;
 }
 #wiki-container {
 	margin:25vh auto;
